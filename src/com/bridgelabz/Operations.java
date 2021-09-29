@@ -2,7 +2,7 @@ package com.bridgelabz;
 
 public class Operations {
     /*
-    Created a method to add data at start.
+     Created a method to add data at start.
       */
     public static LinkedList addDataAtStart() {
         LinkedList linkedList = new LinkedList();
@@ -60,7 +60,6 @@ public class Operations {
         LinkedList linkedList = addDataAtStart();
         linkedList.searchNode(30);
     }
-
     /*
     Created a method to insert after searching.
     */
@@ -72,7 +71,6 @@ public class Operations {
         linkedList.print();
         return linkedList;
     }
-
     /*
     Created a method to delete after searching.
     */
@@ -81,6 +79,16 @@ public class Operations {
         LinkedList linkedList = insertAfterSearchNode();
         System.out.println("after");
         linkedList.deleteANode(40);
+        linkedList.print();
+    }
+    /*
+    Created a method to sort the list.
+    */
+    public static void sortList() {
+        System.out.println("before sorting the list");
+        LinkedList linkedList = insertAfterSearchNode();
+        linkedList.sort();
+        System.out.println("after sorting the list");
         linkedList.print();
     }
 }
