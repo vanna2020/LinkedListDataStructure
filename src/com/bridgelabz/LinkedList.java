@@ -27,7 +27,6 @@ public class LinkedList {
                 else System.out.println(temp.data);
                 temp = temp.next;
             }
-
         }
     }
 
@@ -41,12 +40,23 @@ public class LinkedList {
             tail = newNode;
         }
     }
+
     public void insertInBetween(Node previousNode ,Node newNode){
         Node tempNode = previousNode.next;
         previousNode.next = newNode;
         newNode.next = tempNode;
     }
+
     public void pop() {
         this.head = this.head.next;
+    }
+
+    public void popLast() {
+        Node tempNode= head;
+        while(!tempNode.next.equals(tail)){
+            tempNode=tempNode.next;
+        }
+        this.tail = tempNode;
+        tempNode.next =null;
     }
 }
